@@ -9,7 +9,7 @@ $CURL -H "Content-Type: application/x-www-form-urlencoded" \
       -H "Accept: application/json" \
       -X POST \
       -d $DATA \
-      https://cru.med.uni-heidelberg.de/redcap/api/ > RECODID_RedcapSurvey_${TODAY}.txt \
+      https://cru.med.uni-heidelberg.de/redcap/api/ > data/RECODID_RedcapSurvey_${TODAY}.txt \
 
 echo "[INFO] Filtering received survey results."
-python3 Covid_Redcap.py -f RECODID_RedcapSurvey_${TODAY}.txt > Survey_Summary_${TODAY}.txt
+python3 Covid_Redcap.py -f RECODID_RedcapSurvey_${TODAY}.txt > data/Survey_Summary_${TODAY}.txt
